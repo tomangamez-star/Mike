@@ -1,0 +1,1 @@
+{"name":"michael-shadow-bot","version":"0.1.0","type":"module","scripts":{"start":"node server.js","check":"node --check server.js"},"dependencies":{"@whiskeysockets/baileys":"^6.7.21","express":"^4.21.2","dotenv":"^16.4.7","pino":"^9.6.0"},"engines":{"node":">=20"}}
