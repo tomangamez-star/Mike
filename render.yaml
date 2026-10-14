@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: michael-shadow-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22.16.0
+      - key: DASHBOARD_PASSWORD
+        sync: false
+      - key: OWNER_NUMBER
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: llama-3.1-8b-instant
+      - key: START_BOT
+        value: 'true'
+      - key: SESSION_DIR
+        value: ./data/session
+      - key: STATE_FILE
+        value: ./data/settings.json
